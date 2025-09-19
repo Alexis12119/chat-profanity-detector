@@ -270,7 +270,7 @@ export function ChatLayout({ user, profile, initialRooms }: ChatLayoutProps) {
           <div className="flex flex-1 items-center justify-center p-4">
             <div className="text-center">
               <h2 className="text-xl font-semibold mb-2">
-                Welcome to Tsulatalk ChatApp
+                Welcome to TsulaTalk ChatApp
               </h2>
               <p className="text-muted-foreground">
                 Select a room to start chatting

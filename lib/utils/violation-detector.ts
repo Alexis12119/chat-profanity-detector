@@ -20,6 +20,14 @@ const PROFANITY_WORDS = [
   "loser",
   "bobo",
   "bobo ka",
+  "8080",
+  "Tanginamo",
+  "Putanginamo",
+  "3030",
+  "Tanga",
+  "Panget",
+  "Mongoloid",
+  "9090",
   // Add more words as needed - this is a basic example
 ];
 

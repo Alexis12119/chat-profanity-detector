@@ -28,6 +28,7 @@ const PROFANITY_WORDS = [
   "Panget",
   "Mongoloid",
   "9090",
+  "9495",
   // Add more words as needed - this is a basic example
 ];
 

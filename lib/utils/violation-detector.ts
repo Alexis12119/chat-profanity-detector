@@ -29,6 +29,7 @@ const PROFANITY_WORDS = [
   "Mongoloid",
   "9090",
   "9495",
+  "Potah",
   // Add more words as needed - this is a basic example
 ];
 

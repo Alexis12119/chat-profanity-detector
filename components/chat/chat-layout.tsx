@@ -168,7 +168,7 @@ export function ChatLayout({ user, profile, initialRooms }: ChatLayoutProps) {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-4 border-b border-sidebar-border flex-shrink-0">
             <h1 className="text-lg font-semibold text-sidebar-foreground truncate">
-              ChatApp
+              TsulaTalk ChatApp
             </h1>
             <Button
               variant="ghost"

@@ -1,19 +1,25 @@
-import { createClient } from "@/lib/supabase/server"
-import { redirect } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
-import { MessageCircle, Shield, Users, Zap } from "lucide-react"
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Link from "next/link";
+import { MessageCircle, Shield, Users, Zap } from "lucide-react";
 
 export default async function HomePage() {
-  const supabase = await createClient()
+  const supabase = await createClient();
   const {
     data: { user },
-  } = await supabase.auth.getUser()
+  } = await supabase.auth.getUser();
 
   // If user is logged in, redirect to chat
   if (user) {
-    redirect("/chat")
+    redirect("/chat");
   }
 
   return (
@@ -25,17 +31,23 @@ export default async function HomePage() {
             <MessageCircle className="w-8 h-8 text-primary" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
-            Welcome to <span className="text-primary">ChatApp</span>
+            Welcome to <span className="text-primary">TsulaTalk ChatApp</span>
           </h1>
           <p className="text-xl text-muted-foreground text-balance mb-8 max-w-2xl mx-auto">
-            Connect with others in a safe, moderated environment. Real-time messaging with advanced violation detection
-            and community guidelines.
+            Connect with others in a safe, moderated environment. Real-time
+            messaging with advanced violation detection and community
+            guidelines.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg px-8">
               <Link href="/auth/signup">Get Started</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 bg-transparent"
+            >
               <Link href="/auth/login">Sign In</Link>
             </Button>
           </div>
@@ -49,7 +61,9 @@ export default async function HomePage() {
                 <Zap className="w-6 h-6 text-primary" />
               </div>
               <CardTitle>Real-time Messaging</CardTitle>
-              <CardDescription>Instant messaging with live updates and seamless communication</CardDescription>
+              <CardDescription>
+                Instant messaging with live updates and seamless communication
+              </CardDescription>
             </CardHeader>
           </Card>
 
@@ -60,7 +74,8 @@ export default async function HomePage() {
               </div>
               <CardTitle>Smart Moderation</CardTitle>
               <CardDescription>
-                Advanced violation detection and automated moderation to keep conversations respectful
+                Advanced violation detection and automated moderation to keep
+                conversations respectful
               </CardDescription>
             </CardHeader>
           </Card>
@@ -71,7 +86,10 @@ export default async function HomePage() {
                 <Users className="w-6 h-6 text-accent" />
               </div>
               <CardTitle>Community Focused</CardTitle>
-              <CardDescription>Join public rooms or create private spaces for your team or friends</CardDescription>
+              <CardDescription>
+                Join public rooms or create private spaces for your team or
+                friends
+              </CardDescription>
             </CardHeader>
           </Card>
         </div>
@@ -80,8 +98,12 @@ export default async function HomePage() {
         <div className="text-center mt-16">
           <Card className="max-w-2xl mx-auto">
             <CardHeader>
-              <CardTitle className="text-2xl">Ready to start chatting?</CardTitle>
-              <CardDescription>Join thousands of users in our community-driven chat platform</CardDescription>
+              <CardTitle className="text-2xl">
+                Ready to start chatting?
+              </CardTitle>
+              <CardDescription>
+                Join thousands of users in our community-driven chat platform
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <Button asChild size="lg" className="w-full sm:w-auto">
@@ -92,5 +114,5 @@ export default async function HomePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
